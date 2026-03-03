@@ -1,0 +1,18 @@
+{
+  "name": "security-pulse",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev:api": "npm run dev -w @security-pulse/api",
+    "dev:worker": "npm run dev -w @security-pulse/worker",
+    "dev:web": "npm run dev -w @security-pulse/web",
+    "migrate": "npm run migrate -w @security-pulse/api"
+  },
+  "devDependencies": {
+    "typescript": "5.3.3"
+  }
+}
